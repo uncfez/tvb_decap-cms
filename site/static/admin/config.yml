@@ -7,49 +7,49 @@ public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
+    label: "Inlägg" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Rubrik", name: "title", widget: "string"}
+      - {label: "Publicera", name: "date", widget: "datetime"}
+      - {label: "Inledning", name: "description", widget: "text"}
+      - {label: "Bild", name: "image", widget: "image", required: false}
+      - {label: "Text", name: "body", widget: "markdown"}
   - name: "pages"
-    label: "Pages"
+    label: "Sidor"
     files:
       - file: "site/content/_index.md"
         label: "Home Page"
         name: "home"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
+          - {label: Rubrik, name: title, widget: string}
+          - {label: Underrubrik, name: subtitle, widget: string}
+          - {label: Bild, name: image, widget: image}
+          - {label: "Inledning", name: blurb, widget: object, fields: [
+              {label: "Rubrik 2", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
           - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
+              {label: "Rubrik 2", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
           - {label: "Products", name: products, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
+              {label: "Bild", name: "image", widget: "image"},
               {label: "Text", name: "text", widget: "text"}]}
           - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
+              {label: "Rubrik 2", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
       - file: "site/content/contact/_index.md"
-        label: "Contact Page"
+        label: "Kontakt"
         name: "contact"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: Rubrik, name: title, widget: string}
           - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
+          - {label: Text, name: body, widget: markdown}
+          - label: Kontaktvägar
             name: contact_entries
             widget: list
             fields:
-              - label: Heading
+              - label: Rubrik 2
                 name: heading
                 widget: string
               - label: Text
